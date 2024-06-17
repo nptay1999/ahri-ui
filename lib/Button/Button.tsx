@@ -1,7 +1,7 @@
-import type { ButtonHTMLAttributes } from "react";
+import { Button as AntButton, ButtonProps } from "antd";
 
-type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type TButtonProps = ButtonProps;
 
-export const Button = ({ children }: TButtonProps) => {
-  return <button>{children}</button>;
+export const Button = (props: TButtonProps) => {
+  return <AntButton {...props} />;
 };
