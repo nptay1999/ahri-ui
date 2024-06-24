@@ -1,19 +1,102 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { node: true, commonjs: true, browser: true, es2020: true },
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:storybook/recommended",
+    'plugin:import/typescript',
+    'prettier',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["react-refresh"],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  plugins: [
+    'react',
+    'react-refresh',
+    'sort-imports-es6-autofix',
+    'prettier',
+    '@typescript-eslint',
+    'hooks',
+  ],
   rules: {
-    "react-refresh/only-export-components": [
-      "warn",
+    'react-refresh/only-export-components': [
+      'warn',
       { allowConstantExport: true },
     ],
+    'no-duplicate-imports': 'warn',
+    'sort-imports-es6-autofix/sort-imports-es6': [
+      'warn',
+      {
+        ignoreCase: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+      },
+    ],
+    'no-console': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'react/jsx-curly-brace-presence': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'react-hooks/exhaustive-deps': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'react/display-name': 'off',
+    'prettier/prettier': [
+      'warn',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/explicit-member-accessibility': 'off',
+    '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
+    'react/no-array-index-key': 'warn',
+    'react/jsx-key': 'warn',
+    camelcase: 'warn',
+    'object-shorthand': ['warn', 'always'],
+    '@typescript-eslint/naming-convention': [
+      'warn',
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'interface',
+        prefix: ['I'],
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'typeAlias',
+        prefix: ['T'],
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'enum',
+        prefix: ['E'],
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'enumMember',
+        format: ['UPPER_CASE'],
+      },
+    ],
   },
-};
+}
