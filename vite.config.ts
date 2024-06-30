@@ -1,9 +1,9 @@
 /// <reference types="vitest" />
-import { resolve } from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import tsconfigPaths from "vite-tsconfig-paths";
-import dtsPlugin from "vite-plugin-dts";
+import dtsPlugin from 'vite-plugin-dts'
+import react from '@vitejs/plugin-react-swc'
+import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,29 +11,29 @@ export default defineConfig({
   build: {
     /** Library entry and output setting */
     lib: {
-      entry: resolve(__dirname, "lib/main.ts"),
-      name: "west-ui",
-      fileName: "west-ui",
+      entry: resolve(__dirname, 'lib/main.ts'),
+      name: 'west-ui',
+      fileName: 'west-ui',
     },
     /**
      * Bundle options
      * External react-related imports
      */
     rollupOptions: {
-      external: ["react", "react-dom", "react/jsx-runtime"],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
       output: {
         globals: {
-          react: "React",
-          "react-dome": "ReactDOM",
-          "react/jsx-runtime": "react/jsx-runtime",
+          react: 'React',
+          'react-dome': 'ReactDOM',
+          'react/jsx-runtime': 'react/jsx-runtime',
         },
       },
     },
   },
   test: {
     globals: true,
-    environment: "jsdom",
-    setupFiles: "./lib/test/setup.ts",
+    environment: 'jsdom',
+    setupFiles: './lib/test/setup.ts',
     css: true,
   },
-});
+})

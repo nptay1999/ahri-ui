@@ -1,4 +1,4 @@
-import classes from './Button.module.css'
+import classes from './Button.module.less'
 import { Button as AntButton, ButtonProps } from 'antd'
 
 export type TButtonProps = ButtonProps

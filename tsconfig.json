@@ -6,7 +6,8 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "west-ui": ["./lib/main.ts"]
+      "west-ui": ["./lib/main.ts"],
+      "styles/variables.css": ["./styles/variables.css"]
     },
 
     /* Bundler mode */
@@ -26,6 +27,6 @@
     /* Vitest */
     "types": ["vitest/globals"]
   },
-  "include": ["src", "lib"],
+  "include": ["src", "lib", ".storybook"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
