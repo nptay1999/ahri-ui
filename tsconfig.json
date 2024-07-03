@@ -7,6 +7,7 @@
     "skipLibCheck": true,
     "paths": {
       "ahri-ui": ["./lib/main.ts"],
+      "@/constants": ["./lib/constants/index.ts"],
       "styles/variables.css": ["./styles/variables.css"]
     },
 

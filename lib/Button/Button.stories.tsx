@@ -1,50 +1,51 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './Button'
+import { EColor } from '../constants/enum'
 
 const meta: Meta<typeof Button> = {
   component: Button,
 }
 
 export default meta
-type Story = StoryObj<typeof Button>
+type TStory = StoryObj<typeof Button>
 
-export const Primary: Story = {
+export const Red: TStory = {
   args: {
-    type: 'primary',
     children: 'Button',
+    color: EColor.RED,
   },
 }
 
-export const Default: Story = {
+export const Blue: TStory = {
   args: {
-    type: 'default',
     children: 'Button',
+    color: EColor.BLUE,
   },
 }
 
-export const Dashed: Story = {
+export const Dashed: TStory = {
   args: {
     type: 'dashed',
     children: 'Button',
   },
 }
 
-export const Link: Story = {
+export const Link: TStory = {
   args: {
     type: 'link',
     children: 'Button',
   },
 }
 
-export const Text: Story = {
+export const Text: TStory = {
   args: {
     type: 'text',
     children: 'Button',
   },
 }
 
-export const Ghost: Story = {
+export const Ghost: TStory = {
   args: {
     type: 'primary',
     children: 'Button',
