@@ -6,7 +6,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "west-ui": ["./lib/main.ts"],
+      "ahri-ui": ["./lib/main.ts"],
       "styles/variables.css": ["./styles/variables.css"]
     },
 

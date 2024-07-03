@@ -3,7 +3,7 @@ import * as h from "react";
 import D, { version as $a, isValidElement as Ra, useContext as xe, createContext as gn, useRef as Ze, useLayoutEffect as Ma, useEffect as Je, forwardRef as Ro, useMemo as ja, useState as Bn, Children as Ia, createRef as La } from "react";
 import * as Na from "react-dom";
 import kn from "react-dom";
-const Ba = "west-ui__Button__Button_module__button__HAaFs", ka = {
+const Ba = "ahri-ui__Button__Button_module__button__HAaFs", ka = {
   button: Ba
 };
 function Ha(e) {

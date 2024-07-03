@@ -1,4 +1,4 @@
-import { Button } from "west-ui";
+import { Button } from "ahri-ui";
 
 function App() {
   return (

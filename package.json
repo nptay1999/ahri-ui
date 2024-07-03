@@ -1,17 +1,17 @@
 {
-  "name": "west-ui",
+  "name": "ahri-ui",
   "author": "nptay1999 <nptay1999@gmail.com>",
   "version": "0.0.0",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/west-ui.umd.cjs",
-  "module": "./dist/west-ui.js",
+  "main": "./dist/ahri-ui.umd.cjs",
+  "module": "./dist/ahri-ui.js",
   "exports": {
     ".": {
-      "import": "./dist/west-ui.js",
-      "require": "./dist/west-ui.umd.cjs"
+      "import": "./dist/ahri-ui.js",
+      "require": "./dist/ahri-ui.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },

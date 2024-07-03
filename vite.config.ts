@@ -11,7 +11,7 @@ const getScopedName = (name: string, filename: string, css: string) => {
   const pathArr = filename.replace(/\.\w+$/, '').split('/')
 
   const libIdx = pathArr.indexOf('lib')
-  const westUiIdx = pathArr.indexOf('west-ui')
+  const westUiIdx = pathArr.indexOf('ahri-ui')
 
   const componentName = pathArr
     .slice(libIdx ? libIdx + 1 : westUiIdx + 1)
@@ -25,7 +25,7 @@ const getScopedName = (name: string, filename: string, css: string) => {
     .digest('base64')
     .substring(0, 5)
 
-  return `west-ui__${componentName}__${name}__${hash}`
+  return `ahri-ui__${componentName}__${name}__${hash}`
 }
 
 // https://vitejs.dev/config/
@@ -43,8 +43,8 @@ export default defineConfig({
     /** Library entry and output setting */
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
-      name: 'west-ui',
-      fileName: format => `west-ui.${format}.js`,
+      name: 'ahri-ui',
+      fileName: format => `ahri-ui.${format}.js`,
     },
     /**
      * Bundle options
